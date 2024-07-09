@@ -1,7 +1,8 @@
 from flask import Flask, json, jsonify, request
+
 from model.twit import Twit
 
-twits = {}
+twits = []
 
 app = Flask(__name__)
 
@@ -29,8 +30,8 @@ def creat_twit():
 
 
 @app.route('/twit', methods=['GET'])
-def read_twit():
-    return jsonify({'twits': 'twits'})
+def read_twits():
+    return jsonify({'twits': twits})
 
 
 if __name__ == '__main__':
