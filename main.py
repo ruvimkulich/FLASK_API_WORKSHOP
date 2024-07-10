@@ -3,7 +3,7 @@ from model.twit import Twit
 
 app = Flask(__name__)
 
-# Временные хранилища для постов и счетчик идентификаторов
+# Хранилище для постов и счетчик next_twit_id
 twits = []
 next_twit_id = 1
 
